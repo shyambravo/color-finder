@@ -8,6 +8,8 @@ var genImage = () => {
     reader.onload = () => {
         const base64 = reader.result;
 
+        document.getElementById("colorpane").innerHTML = ";
+
         image.onload = () => {
             var colorMap = {};
 
@@ -49,10 +51,6 @@ var genImage = () => {
             })
 
             order.forEach((color, index) => {
-                // if(index > 100) {
-                //     return;
-                // }
-
                 const pallete = document.createElement("div");
 
                 pallete.style.width = "150px";
